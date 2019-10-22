@@ -9,6 +9,9 @@ window.onload = function() {
 	var state=1;
 	var board = document.getElementsByTagName("div");
 	var status = document.getElementById("status");
+	var gameover = false;
+	
+
 
 	//Applies the square class to all divs contained in the board section of the html code
 	console.log(board.length);
@@ -24,8 +27,8 @@ window.onload = function() {
 	}
 
 	function makeMove(x){
-		if (board[x].className != "square X" && board[x].className != "square O"){
-			gamestate[x-3]=state; // since the 4st square starts at the 3rd div 3 must be subtracted to be in the correct position
+		if (board[x].className != "square X" && board[x].className != "square O" && gameover==false){
+			gamestate[x-3]=state; // since the 1st square starts at the 3rd <div>, 3 must be subtracted to be in the correct position
 			option(x);
 		}
 		else{
@@ -40,21 +43,25 @@ window.onload = function() {
 			if (state == 1){
 				board[x].setAttribute("class","square X");
 				board[x].innerHTML="X";
-				turncount++;
-				state=-1
 				if (turncount>=5){
-					winner();
-				}
+					console.log("Test")
+					winner(x);
+				}	
+				state=-1
+				turncount++;
+				
+				
 				
 			}
 			else{
 				board[x].setAttribute("class","square O");
 				board[x].innerHTML="O";
-				turncount++;
-				state=1
 				if (turncount>=5){
-					winner();
+					console.log("Test")
+					winner(x);
 				}
+				state=1
+				turncount++;
 				
 			}
 		}
@@ -99,32 +106,45 @@ window.onload = function() {
 			//board[i].onmouseout = function(){hoverOFF(i-3)};
 
 
-	function winner(){
+	function winner(x){
 		//First Row
-		if (gamestate=[0] + gamestate[1] + gamestate[2]==3){
+		if (gamestate[0] + gamestate[1] + gamestate[2]==3){
 			status.innerHTML="Player X is the winner!";
 			status.setAttribute("class","you-won");
+			turncount>9;
+			gameover=true;
 		} else if (gamestate[0] + gamestate[1] + gamestate[2]== -3){
 			status.innerHTML="Player O is the winner!";
 			status.setAttribute("class","you-won");
+			turncount>9;
+		}else{
+			console.log("Test Failed");
 		}
 
 		//Second Row
 		if (gamestate[3] + gamestate[4] + gamestate[5]==3){
 			status.innerHTML="Player X is the winner!";
 			status.setAttribute("class","you-won");
+			turncount>9;
 		} else if (gamestate[3] + gamestate[4] + gamestate[5]== -3){
 			status.innerHTML="Player O is the winner!";
 			status.setAttribute("class","you-won");
+			turncount>9;
+		}else{
+			console.log("Test Failed");
 		}
 
 		//Third Row
 		if (gamestate[6] + gamestate[7] + gamestate[8]==3){
 			status.innerHTML="Player X is the winner!";
 			status.setAttribute("class","you-won");
+			turncount>9;
 		} else if (gamestate[6] + gamestate[7] + gamestate[8]== -3){
 			status.innerHTML="Player O is the winner!";
 			status.setAttribute("class","you-won");
+			turncount>9;
+		}else{
+			console.log("Test Failed");
 		}
 
 
@@ -132,49 +152,67 @@ window.onload = function() {
 		if (gamestate[0] + gamestate[3] + gamestate[6]==3){
 			status.innerHTML="Player X is the winner!";
 			status.setAttribute("class","you-won");
+			turncount>9;
 		} else if (gamestate[0] + gamestate[3] + gamestate[6]== -3){
 			status.innerHTML="Player O is the winner!";
 			status.setAttribute("class","you-won");
+			turncount>9;
+		}else{
+			console.log("Test Failed");
 		}
 
 		//Second Column
 		if (gamestate[1] + gamestate[4] + gamestate[7]==3){
 			status.innerHTML="Player X is the winner!";
 			status.setAttribute("class","you-won");
+			turncount>9;
 		} else if (gamestate[1] + gamestate[4] + gamestate[7]== -3){
 			status.innerHTML="Player O is the winner!";
 			status.setAttribute("class","you-won");
+			turncount>9;
+		}else{
+			console.log("Test Failed");
 		}
 
 		//Third Column
 		if (gamestate[2] + gamestate[5] + gamestate[8]==3){
 			status.innerHTML="Player X is the winner!";
 			status.setAttribute("class","you-won");
+			turncount>9;
 		} else if (gamestate[2] + gamestate[5] + gamestate[8]== -3){
 			status.innerHTML="Player O is the winner!";
 			status.setAttribute("class","you-won");
+			turncount>9;
+		}else{
+			console.log("Test Failed");
 		}
 
 		//Left Diagonal
 		if (gamestate[0] + gamestate[4] + gamestate[8]==3){
 			status.innerHTML="Player X is the winner!";
 			status.setAttribute("class","you-won");
+			turncount>9;
 		} else if (gamestate[0] + gamestate[4] + gamestate[8]== -3){
 			status.innerHTML="Player O is the winner!";
 			status.setAttribute("class","you-won");
+			turncount>9;
+		}else{
+			console.log("Test Failed");
 		}
 
 		//Right Diagonal
 		if (gamestate[2] + gamestate[4] + gamestate[6]==3){
 			status.innerHTML="Player X is the winner!";
 			status.setAttribute("class","you-won");
+			turncount>9;
+
 		} else if (gamestate[2] + gamestate[4] + gamestate[6]== -3){
 			status.innerHTML="Player O is the winner!";
 			status.setAttribute("class","you-won");
+			gameover==true;
 		}else{
-			status.innerHTML="It's not over yet!";
+			console.log("Test Failed");
 		}
-		
 	}
 	function hoverON(x){
 		board[x].classList.add("hover");
