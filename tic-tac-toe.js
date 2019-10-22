@@ -19,11 +19,14 @@ window.onload = function() {
 		for (var i=3; i <= 11; i++) {
 			board[i].setAttribute("class", "square");
 			board[i].innerHTML="";
+			status.innerHTML="Move your mouse over a square and click to play an X or an O.";
+			status.setAttribute("class","");
 		}
 		//Resets the values for a new game
 		state=1
 		gamestate=[0,0,0,0,0,0,0,0,0]
 		turncount = 1;
+		gameover=false;
 	}
 
 	function makeMove(x){
@@ -111,12 +114,13 @@ window.onload = function() {
 		if (gamestate[0] + gamestate[1] + gamestate[2]==3){
 			status.innerHTML="Player X is the winner!";
 			status.setAttribute("class","you-won");
-			turncount>9;
+			turncount=9;
 			gameover=true;
 		} else if (gamestate[0] + gamestate[1] + gamestate[2]== -3){
 			status.innerHTML="Player O is the winner!";
 			status.setAttribute("class","you-won");
-			turncount>9;
+			turncount=9;
+			gameover=true;
 		}else{
 			console.log("Test Failed");
 		}
@@ -125,11 +129,13 @@ window.onload = function() {
 		if (gamestate[3] + gamestate[4] + gamestate[5]==3){
 			status.innerHTML="Player X is the winner!";
 			status.setAttribute("class","you-won");
-			turncount>9;
+			turncount=9;
+			gameover=true;
 		} else if (gamestate[3] + gamestate[4] + gamestate[5]== -3){
 			status.innerHTML="Player O is the winner!";
 			status.setAttribute("class","you-won");
-			turncount>9;
+			turncount=9;
+			gameover=true;
 		}else{
 			console.log("Test Failed");
 		}
@@ -138,11 +144,13 @@ window.onload = function() {
 		if (gamestate[6] + gamestate[7] + gamestate[8]==3){
 			status.innerHTML="Player X is the winner!";
 			status.setAttribute("class","you-won");
-			turncount>9;
+			turncount=9;
+			gameover=true;
 		} else if (gamestate[6] + gamestate[7] + gamestate[8]== -3){
 			status.innerHTML="Player O is the winner!";
 			status.setAttribute("class","you-won");
-			turncount>9;
+			turncount=9;
+			gameover=true;
 		}else{
 			console.log("Test Failed");
 		}
@@ -152,11 +160,13 @@ window.onload = function() {
 		if (gamestate[0] + gamestate[3] + gamestate[6]==3){
 			status.innerHTML="Player X is the winner!";
 			status.setAttribute("class","you-won");
-			turncount>9;
+			turncount=9;
+			gameover=true;
 		} else if (gamestate[0] + gamestate[3] + gamestate[6]== -3){
 			status.innerHTML="Player O is the winner!";
 			status.setAttribute("class","you-won");
-			turncount>9;
+			turncount=9;
+			gameover=true;
 		}else{
 			console.log("Test Failed");
 		}
@@ -165,11 +175,13 @@ window.onload = function() {
 		if (gamestate[1] + gamestate[4] + gamestate[7]==3){
 			status.innerHTML="Player X is the winner!";
 			status.setAttribute("class","you-won");
-			turncount>9;
+			turncount=9;
+			gameover=true;
 		} else if (gamestate[1] + gamestate[4] + gamestate[7]== -3){
 			status.innerHTML="Player O is the winner!";
 			status.setAttribute("class","you-won");
-			turncount>9;
+			turncount=9;
+			gameover=true;
 		}else{
 			console.log("Test Failed");
 		}
@@ -178,11 +190,13 @@ window.onload = function() {
 		if (gamestate[2] + gamestate[5] + gamestate[8]==3){
 			status.innerHTML="Player X is the winner!";
 			status.setAttribute("class","you-won");
-			turncount>9;
+			turncount=9;
+			gameover=true;
 		} else if (gamestate[2] + gamestate[5] + gamestate[8]== -3){
 			status.innerHTML="Player O is the winner!";
 			status.setAttribute("class","you-won");
-			turncount>9;
+			turncount=9;
+			gameover=true;
 		}else{
 			console.log("Test Failed");
 		}
@@ -191,11 +205,13 @@ window.onload = function() {
 		if (gamestate[0] + gamestate[4] + gamestate[8]==3){
 			status.innerHTML="Player X is the winner!";
 			status.setAttribute("class","you-won");
-			turncount>9;
+			turncount=9;
+			gameover=true;
 		} else if (gamestate[0] + gamestate[4] + gamestate[8]== -3){
 			status.innerHTML="Player O is the winner!";
 			status.setAttribute("class","you-won");
-			turncount>9;
+			turncount=9;
+			gameover=true;
 		}else{
 			console.log("Test Failed");
 		}
@@ -204,12 +220,14 @@ window.onload = function() {
 		if (gamestate[2] + gamestate[4] + gamestate[6]==3){
 			status.innerHTML="Player X is the winner!";
 			status.setAttribute("class","you-won");
-			turncount>9;
+			turncount=9;
+			gameover=true;
 
 		} else if (gamestate[2] + gamestate[4] + gamestate[6]== -3){
 			status.innerHTML="Player O is the winner!";
 			status.setAttribute("class","you-won");
-			gameover==true;
+			turncount=9;
+			gameover=true;
 		}else{
 			console.log("Test Failed");
 		}
