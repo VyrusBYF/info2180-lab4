@@ -112,12 +112,12 @@ window.onload = function() {
 	function winner(x){
 		//First Row
 		if (gamestate[0] + gamestate[1] + gamestate[2]==3){
-			status.innerHTML="Player X is the winner!";
+			status.innerHTML="Congratulations! X is the Winner!";
 			status.setAttribute("class","you-won");
 			turncount=9;
 			gameover=true;
 		} else if (gamestate[0] + gamestate[1] + gamestate[2]== -3){
-			status.innerHTML="Player O is the winner!";
+			status.innerHTML="Congratulations! O is the Winner!";
 			status.setAttribute("class","you-won");
 			turncount=9;
 			gameover=true;
@@ -127,12 +127,12 @@ window.onload = function() {
 
 		//Second Row
 		if (gamestate[3] + gamestate[4] + gamestate[5]==3){
-			status.innerHTML="Player X is the winner!";
+			status.innerHTML="Congratulations! X is the Winner!";
 			status.setAttribute("class","you-won");
 			turncount=9;
 			gameover=true;
 		} else if (gamestate[3] + gamestate[4] + gamestate[5]== -3){
-			status.innerHTML="Player O is the winner!";
+			status.innerHTML="Congratulations! O is the Winner!";
 			status.setAttribute("class","you-won");
 			turncount=9;
 			gameover=true;
@@ -142,12 +142,12 @@ window.onload = function() {
 
 		//Third Row
 		if (gamestate[6] + gamestate[7] + gamestate[8]==3){
-			status.innerHTML="Player X is the winner!";
+			status.innerHTML="Congratulations! X is the Winner!";
 			status.setAttribute("class","you-won");
 			turncount=9;
 			gameover=true;
 		} else if (gamestate[6] + gamestate[7] + gamestate[8]== -3){
-			status.innerHTML="Player O is the winner!";
+			status.innerHTML="Congratulations! O is the Winner!";
 			status.setAttribute("class","you-won");
 			turncount=9;
 			gameover=true;
@@ -158,12 +158,12 @@ window.onload = function() {
 
 		//First Column
 		if (gamestate[0] + gamestate[3] + gamestate[6]==3){
-			status.innerHTML="Player X is the winner!";
+			status.innerHTML="Congratulations! X is the Winner!";
 			status.setAttribute("class","you-won");
 			turncount=9;
 			gameover=true;
 		} else if (gamestate[0] + gamestate[3] + gamestate[6]== -3){
-			status.innerHTML="Player O is the winner!";
+			status.innerHTML="Congratulations! O is the Winner!";
 			status.setAttribute("class","you-won");
 			turncount=9;
 			gameover=true;
@@ -173,12 +173,12 @@ window.onload = function() {
 
 		//Second Column
 		if (gamestate[1] + gamestate[4] + gamestate[7]==3){
-			status.innerHTML="Player X is the winner!";
+			status.innerHTML="Congratulations! X is the Winner!";
 			status.setAttribute("class","you-won");
 			turncount=9;
 			gameover=true;
 		} else if (gamestate[1] + gamestate[4] + gamestate[7]== -3){
-			status.innerHTML="Player O is the winner!";
+			status.innerHTML="Congratulations! O is the Winner!";
 			status.setAttribute("class","you-won");
 			turncount=9;
 			gameover=true;
@@ -188,12 +188,12 @@ window.onload = function() {
 
 		//Third Column
 		if (gamestate[2] + gamestate[5] + gamestate[8]==3){
-			status.innerHTML="Player X is the winner!";
+			status.innerHTML="Congratulations! X is the Winner!";
 			status.setAttribute("class","you-won");
 			turncount=9;
 			gameover=true;
 		} else if (gamestate[2] + gamestate[5] + gamestate[8]== -3){
-			status.innerHTML="Player O is the winner!";
+			status.innerHTML="Congratulations! O is the Winner!";
 			status.setAttribute("class","you-won");
 			turncount=9;
 			gameover=true;
@@ -203,12 +203,12 @@ window.onload = function() {
 
 		//Left Diagonal
 		if (gamestate[0] + gamestate[4] + gamestate[8]==3){
-			status.innerHTML="Player X is the winner!";
+			status.innerHTML="Congratulations! X is the Winner!";
 			status.setAttribute("class","you-won");
 			turncount=9;
 			gameover=true;
 		} else if (gamestate[0] + gamestate[4] + gamestate[8]== -3){
-			status.innerHTML="Player O is the winner!";
+			status.innerHTML="Congratulations! O is the Winner!";
 			status.setAttribute("class","you-won");
 			turncount=9;
 			gameover=true;
@@ -218,13 +218,13 @@ window.onload = function() {
 
 		//Right Diagonal
 		if (gamestate[2] + gamestate[4] + gamestate[6]==3){
-			status.innerHTML="Player X is the winner!";
+			status.innerHTML="Congratulations! X is the Winner!";
 			status.setAttribute("class","you-won");
 			turncount=9;
 			gameover=true;
 
 		} else if (gamestate[2] + gamestate[4] + gamestate[6]== -3){
-			status.innerHTML="Player O is the winner!";
+			status.innerHTML="Congratulations! O is the Winner!";
 			status.setAttribute("class","you-won");
 			turncount=9;
 			gameover=true;
