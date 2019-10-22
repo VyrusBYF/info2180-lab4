@@ -30,12 +30,13 @@ window.onload = function() {
 	}
 
 	function makeMove(x){
-		if (board[x].className != "square X" && board[x].className != "square O" && gameover==false){
+		if (board[x].className != "square X" && board[x].className != "square O" && gamestate[x-3]==0 && gameover==false ){
 			gamestate[x-3]=state; // since the 1st square starts at the 3rd <div>, 3 must be subtracted to be in the correct position
 			option(x);
 		}
 		else{
 			console.log("I didn't work");
+			status.innerHTML="Try Again";
 		}
 		console.log(gamestate);
 
@@ -231,6 +232,8 @@ window.onload = function() {
 		}else{
 			console.log("Test Failed");
 		}
+
+		
 	}
 	function hoverON(x){
 		board[x].classList.add("hover");
