@@ -36,7 +36,8 @@ window.onload = function() {
 		}
 		else{
 			console.log("I didn't work");
-			status.innerHTML="Try Again";
+			status.setAttribute("class","");
+			status.innerHTML="Try Again";	
 		}
 		console.log(gamestate);
 
